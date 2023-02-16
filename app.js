@@ -11,17 +11,17 @@ const cardArray = [
     },
     {
         name: 'cheeseburger', 
-        img: '/memorygame/cheeseburger.png'
+        img: <img src="/memorygame/cheeseburger.png">
 
     },
     {
         name: 'hotdog', 
-        img: '/memorygame/hotdog.png'
+        img: <img src="/memorygame/hotdog.png">
 
     },
     {
         name: 'ice-cream', 
-        img: '/memorygame/ice-cream.png'
+        img: <img src="/memorygame/ice-cream.png">
 
     },
     {
@@ -80,7 +80,7 @@ let cardsWon = []
 function createBoard() {
     for (let i = 0; i < cardArray.length; i++) {
         var card = document.createElement('img')
-        card.setAttribute('src', '/memorygame/blank.png')
+        card.setAttribute('src', <img src="/memorygame/blank.png">)
         card.setAttribute('data-id', i)
         card.addEventListener('click', flipCard)
         grid.appendChild(card)

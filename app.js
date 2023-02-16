@@ -6,62 +6,62 @@ document.addEventListener('DOMContentLoaded', () => {
 const cardArray = [
     {
         name: 'fries',  
-        img: 'images/fries.png'
+        img: '/memorygame/fries.png'
 
     },
     {
         name: 'cheeseburger', 
-        img: 'images/cheeseburger.png'
+        img: '/memorygame/cheeseburger.png'
 
     },
     {
         name: 'hotdog', 
-        img: 'images/hotdog.png'
+        img: '/memorygame/hotdog.png'
 
     },
     {
         name: 'ice-cream', 
-        img: 'images/ice-cream.png'
+        img: '/memorygame/ice-cream.png'
 
     },
     {
         name: 'milkshake', 
-        img: 'images/milkshake.png'
+        img: '/memorygame/milkshake.png'
 
     },
     {
         name: 'pizza', 
-        img: 'images/pizza.png'
+        img: '/memorygame/pizza.png'
 
     },
     {
         name: 'fries', 
-        img: 'images/fries.png'
+        img: '/memorygame/fries.png'
 
     },
     {
         name: 'hotdog', 
-        img: 'images/hotdog.png'
+        img: '/memorygame/hotdog.png'
 
     },
     {
         name: 'cheeseburger', 
-        img: 'images/cheeseburger.png'
+        img: '/memorygame/cheeseburger.png'
 
     },
     {
         name: 'pizza', 
-        img: 'images/pizza.png'
+        img: '/memorygame/pizza.png'
 
     },
     {
         name: 'ice-cream', 
-        img: 'images/ice-cream.png'
+        img: '/memorygame/ice-cream.png'
 
     },
     {
         name: 'milkshake', 
-        img: 'images/milkshake.png'
+        img: '/memorygame/milkshake.png'
 
     }
 
@@ -80,7 +80,7 @@ let cardsWon = []
 function createBoard() {
     for (let i = 0; i < cardArray.length; i++) {
         var card = document.createElement('img')
-        card.setAttribute('src', 'images/blank.png')
+        card.setAttribute('src', '/memorygame/blank.png')
         card.setAttribute('data-id', i)
         card.addEventListener('click', flipCard)
         grid.appendChild(card)
@@ -94,12 +94,12 @@ function checkForMatch() {
     const optionTwoId = cardsChosenId[1]
     if (cardsChosen[0] === cardsChosen[1]) {
         alert('You found a match')
-        cards[optionOneId].setAttribute('src', 'images/white.png')
-        cards[optionTwoId].setAttribute('src', 'images/white.png')
+        cards[optionOneId].setAttribute('src', '/memorygame/white.png')
+        cards[optionTwoId].setAttribute('src', '/memorygame/white.png')
         cardsWon.push(cardsChosen)    
     } else {
-        cards[optionOneId].setAttribute('src', 'images/blank.png')
-        cards[optionTwoId].setAttribute('src', 'images/blank.png')
+        cards[optionOneId].setAttribute('src', '/memorygame/blank.png')
+        cards[optionTwoId].setAttribute('src', '/memorygame/blank.png')
         alert('Sorry, try again')
     }
 cardsChosen = []
